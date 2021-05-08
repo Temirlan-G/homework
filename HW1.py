@@ -27,18 +27,17 @@ class Fraction:
         return str(self.a) + '\n' + '-\n' + str(self.b)
 
 
+if __name__  == '__main__':
+    f = Fraction(2, 5)
+    f1 = Fraction(1, 4)
 
-f = Fraction(2, 5)
-f1 = Fraction(1, 4)
+    f_add = f + f1
+    f_sub = f - f1
+    f_mul = f * f1
+    f_div = f / f1
 
-f_add = f + f1
-f_sub = f - f1
-f_mul = f * f1
-f_div = f / f1
-
-print(f_add)
-print(f_sub)
-print(f_mul)
-print(f_div)
-
+    print(f_add)
+    print(f_sub)
+    print(f_mul)
+    print(f_div)
 
