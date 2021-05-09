@@ -35,13 +35,13 @@ cmplx3 = Complex(6, 2)
 
 
 add = cmplx + cmplx1
-print(add, '  add')
+print(add, '  add z1=5+3, z2=8+2')
 sub = cmplx - cmplx1
-print(sub, ' subtract')
+print(sub, ' subtract z1=5+3, z2=8+2')
 mul = cmplx * cmplx1
-print(mul, ' multiply')
-div = cmplx / cmplx1
-print(div, ' divide')
+print(mul, ' multiply z1=5+3, z2=8+2')
+div = cmplx2 / cmplx3
+print(div, ' divide z1=7+3, z2=6+2')
 
 print('--------------------------------------------------')
 
