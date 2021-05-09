@@ -7,37 +7,49 @@ class Complex:
     def __add__(self, mnim):
         z1 = self.a + mnim.a
         z2 = self.b + mnim.b
-        return print(z1,'+', z2,'i')
+        return Complex(z1, z2)
 
     def __sub__(self, mnim):
         z1 = self.a - mnim.a
         z2 = self.b - mnim.b
-        return print(z1,'+', z2,'i')
+        return Complex(z1, z2)
 
     def __mul__(self, mnim):
         z1 = self.a * mnim.a - self.b * mnim.b
         z2 = self.a * mnim.b + mnim.a * self.b
-        return print(z1, '+', z2, 'i')
+        return Complex(z1, z2)
 
     def __truediv__(self, mnim):
-        z1 = (self.a * self.b + mnim.a * mnim.b) / (self.b**2 + mnim.b**2)
-        z2 = (mnim.a * self.b - self.a * mnim.b) / (self.b**2 + mnim.b**2)
-        return print(z1, '+', z2, 'i')
+        z1 = (self.a * mnim.a + self.b * mnim.b) / (mnim.a**2 + mnim.b**2)
+        z2 = (self.b * mnim.a - self.a * mnim.b) / (mnim.a**2 + mnim.b**2)
+        return Complex(z1, z2)
 
-# self.a = a
-# mnim.a = b
-# self.b = c
-# mnim.b = d
+    def __str__(self):
+        return str(self.a) + ' + ' + str(self.b) + 'i'
 
-cmpls = Complex(5, 3)
-cmpls1 = Complex(8, 2)
 
-cmplx = Complex(-5, -1)
-cmplx1 = Complex(-1, 1)
+cmplx = Complex(5, 3)
+cmplx1 = Complex(8, 2)
+cmplx2 = Complex(7, 3)
+cmplx3 = Complex(6, 2)
 
-add = cmpls + cmpls1
-sub = cmpls - cmpls1
-mul = cmpls * cmpls1
+
+add = cmplx + cmplx1
+print(add, '  add')
+sub = cmplx - cmplx1
+print(sub, ' subtract')
+mul = cmplx * cmplx1
+print(mul, ' multiply')
 div = cmplx / cmplx1
+print(div, ' divide')
 
+print('--------------------------------------------------')
 
+add1 = cmplx + cmplx1 + cmplx3 + cmplx3
+print(add1)
+sub1 = cmplx - cmplx1 - cmplx2 - cmplx3
+print(sub1)
+mul1 = cmplx * cmplx1 * cmplx2 * cmplx3
+print(mul1)
+div1 = cmplx / cmplx1 / cmplx2 / cmplx3
+print(div1)
