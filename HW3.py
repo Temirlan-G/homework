@@ -13,6 +13,7 @@ class BankAccount:
         else:
             self._balance = amount
 
+
 bank1 = BankAccount(0)
 
 bank1.balance = 2000
