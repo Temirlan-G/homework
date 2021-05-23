@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> My web page </title>
+
+    <style>
+
+    body {
+        background-image: url(background.png);
+     }
+
+     #main-title {
+     text-align: center;
+     color: yellow;
+     font-size: 50px;
+     font-family: 'Times New Roman';
+     }
+     
+     #information {
+         font-family: Helvetica;
+         font-size: 30px;
+         color: white;
+     }
+
+     #img {
+         width: 300px;
+         height: 300px;
+         position: absolute;
+         top: 8px;
+         right: 16px;
+     }
+
+    </style> 
+
+</head>
+<body>
+    <h1 id="main-title"> Информация </h1>
+    <ul id="information">
+        <li> Фамилия: Туманбеков </li> 
+        <li> Имя: Темирлан </li>
+        <li> Дата рождения: 30.10.1995 </li>
+        <li> Место проживания: Кыргызстан, г.Бишкек </li>
+        <p> </p>
+        <li> Общее образование: 
+            <ol> 
+                <li> Школа: СШ №27</li>
+                <li> Университет: КНУ им Ж.Баласагына </li>
+            </ol>  
+        <p> </p>
+        <li> Место работы: ООО "Нур Телеком" </li>    
+        </li>
+    </ul>
+    <p> <img id="img" src="photo.jpg" alt="">  </p>
+
+
+        <script>
+
+            const body = document.getElementById('img');
+            let deg = 720;
+            setInterval(() => {
+                deg = 720;
+                body.style.transition = "all 30s"
+                body.style.transform = `rotateY(${deg}deg)`
+            }, 100);
+        </script>
+</body>
+</html>
