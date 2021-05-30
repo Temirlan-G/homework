@@ -9,4 +9,3 @@ class Factorial:
 
 fct = Factorial()
 print(fct.factorial(4))
-
